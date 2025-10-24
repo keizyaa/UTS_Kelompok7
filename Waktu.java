@@ -17,4 +17,10 @@ public class Waktu {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("HH:mm:ss");
         System.out.println("🕒 Waktu sekarang: " + waktuSekarang.format(fmt));
     }
+
+    public void tampilkanWaktuSekarang(String pesan) {
+        LocalTime waktuSekarang = LocalTime.now();
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("HH:mm:ss");
+        System.out.println(pesan + " " + waktuSekarang.format(fmt));
+    }
 }

@@ -8,7 +8,6 @@ public class FarmUp {
         System.out.print("Masukkan nama petani Anda: ");
         String nama = sc.nextLine();
 
-        // Inisialisasi objek utama
         Petani petani = new Petani(nama, 100);
         Lahan lahan = new Lahan();
         Cuaca cuaca = new Cuaca();
@@ -17,7 +16,7 @@ public class FarmUp {
         Warehouse warehouse = new Warehouse(20);
         petani.setWarehouse(warehouse);
 
-        waktu.tampilkanWaktuSekarang();
+        waktu.tampilkanWaktuSekarang("Sekarang jam:");
 
         System.out.println("\nSelamat datang di FarmUp, " + nama + " 🌱");
         System.out.println("Mulailah menanam dan kembangkan pertanianmu!\n");
@@ -110,6 +109,7 @@ public class FarmUp {
                 System.out.print("Jumlah yang ingin dijual: ");
                 int jumlah = sc.nextInt();
                 petani.jualHasil(toko, hasil, jumlah);
+                waktu.tampilkanWaktuSekarang();
             }
 
                 case 0 -> {
